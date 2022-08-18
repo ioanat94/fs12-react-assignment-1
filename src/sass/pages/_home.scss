@@ -1,0 +1,238 @@
+@use '../sass-utils/variables';
+@use '../sass-utils/mixins';
+@use '../components/service';
+@use '../components/stack__icon';
+@use '../components/article';
+
+.home__wrapper {
+  width: 60vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  @include mixins.xl {
+    width: 70vw;
+  }
+
+  @include mixins.md {
+    width: 80vw;
+  }
+}
+
+.hero {
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+
+  @include mixins.lg {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @include mixins.sm {
+    padding-top: 126px;
+  }
+
+  .hero__left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero__svg {
+    transform: scale(1);
+
+    .hand-right {
+      transform-origin: center center;
+      animation: typing 1s alternate infinite;
+    }
+
+    .hand-left {
+      transform-origin: center center;
+      animation: typing 1s alternate-reverse infinite;
+    }
+
+    .foot {
+      transform-origin: right;
+      animation: sway 1.5s alternate infinite;
+    }
+
+    @keyframes sway {
+      0% {
+        transform: translate(-238.98652px, -154.54184px) rotate(-5deg);
+      }
+      100% {
+        transform: translate(-258.98652px, -154.54184px) rotate(-12deg);
+      }
+    }
+
+    @keyframes typing {
+      0% {
+        transform: translate(-198.98652px, -154.54184px) rotate(0deg);
+      }
+      100% {
+        transform: translate(-198.98652px, -154.54184px) rotate(0.7deg);
+      }
+    }
+  }
+}
+
+.hero__arrow {
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-bottom: 0;
+  border-top: 30px solid variables.$primary-color;
+  margin: 0 auto;
+  animation: jump 1s infinite alternate;
+}
+
+@keyframes jump {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+#services {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  @include mixins.lg {
+    align-items: center;
+  }
+
+  .services__list {
+    display: flex;
+    gap: 50px;
+
+    @include mixins.xl {
+      gap: 30px;
+    }
+
+    @include mixins.lg {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+#stack {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  @include mixins.sm {
+    align-items: center;
+  }
+
+  .stack__tech {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    font-size: 32px;
+
+    @include mixins.lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mixins.md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mixins.sm {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+#blogs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  a {
+    text-align: center;
+    text-decoration: none;
+    color: variables.$primary-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .blogs__bloglist {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 30px;
+  }
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 50px;
+
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact__input {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    @include mixins.lg {
+      width: 90%;
+    }
+
+    @include mixins.md {
+      width: 100%;
+    }
+
+    @include mixins.sm {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-size: 20px;
+    }
+
+    input {
+      width: 380px;
+      height: 40px;
+      border: 2px solid variables.$primary-color;
+      border-radius: 10px;
+      text-indent: 10px;
+
+      @include mixins.sm {
+        width: 300px;
+      }
+    }
+
+    textarea {
+      width: 380px;
+      height: 150px;
+      border: 2px solid variables.$primary-color;
+      border-radius: 10px;
+      text-indent: 10px;
+      padding-top: 10px;
+
+      @include mixins.sm {
+        width: 300px;
+      }
+    }
+  }
+}

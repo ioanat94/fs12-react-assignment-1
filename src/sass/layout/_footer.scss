@@ -1,0 +1,29 @@
+@use '../sass-utils/variables';
+@use '../sass-utils/mixins';
+
+.footer {
+  height: 60px;
+  padding: 10px 50px;
+  background-color: variables.$primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+
+  @include mixins.sm {
+    padding: 10px 20px;
+  }
+
+  .footer__socials {
+    display: flex;
+    gap: 20px;
+
+    img {
+      width: 30px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

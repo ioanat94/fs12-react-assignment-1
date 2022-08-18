@@ -1,0 +1,67 @@
+@use '../sass-utils/variables';
+@use '../base/typography';
+@use '../sass-utils/mixins';
+
+.header__nav {
+  color: #e9e9e9;
+  display: flex;
+  gap: 20px;
+
+  .nav-link,
+  a {
+    text-decoration: none;
+    color: #e9e9e9;
+
+    &:visited {
+      color: #e9e9e9;
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  @include mixins.sm {
+    display: none;
+  }
+}
+
+.hamburger {
+  border: 1px solid variables.$primary-color !important;
+}
+
+.hidden {
+  display: none !important;
+
+  @include mixins.sm {
+    display: block !important;
+  }
+}
+
+.hamburger-nav-hidden {
+  display: none;
+}
+
+.hamburger-nav-active {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  right: 20px;
+  top: 80px;
+  background-color: variables.$primary-color;
+  padding: 30px 50px;
+
+  a {
+    text-decoration: none;
+    color: #e9e9e9;
+
+    &:visited {
+      color: #e9e9e9;
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
+}

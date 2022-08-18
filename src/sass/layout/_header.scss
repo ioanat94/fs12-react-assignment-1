@@ -1,0 +1,15 @@
+@use '../sass-utils/variables';
+@use '../layout/navigation';
+@use '../sass-utils/mixins';
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: variables.$primary-color;
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+}

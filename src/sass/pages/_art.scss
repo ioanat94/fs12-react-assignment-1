@@ -1,0 +1,45 @@
+@use '../sass-utils/mixins';
+
+.article__wrapper {
+  width: 60vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @include mixins.xl {
+    width: 70vw;
+  }
+
+  @include mixins.md {
+    width: 80vw;
+  }
+
+  .article__title {
+    height: 300px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .article__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      text-align: left;
+    }
+
+    &:last-child {
+      padding-bottom: 100px;
+    }
+  }
+}

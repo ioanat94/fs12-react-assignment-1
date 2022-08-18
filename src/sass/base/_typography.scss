@@ -1,0 +1,56 @@
+@use '../sass-utils/variables';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+h1 {
+  font-weight: $font-weight-extrabold;
+  font-size: 40px;
+  color: variables.$primary-color;
+}
+
+h2 {
+  font-weight: $font-weight-bold;
+  font-size: 32px;
+  color: variables.$primary-color;
+  text-align: center;
+}
+
+h3 {
+  font-weight: $font-weight-semibold;
+  font-size: 24px;
+}
+
+h4 {
+  font-weight: $font-weight-medium;
+  font-size: 20px;
+}
+
+p {
+  font-weight: $font-weight-regular;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  color: variables.$primary-color;
+  font-weight: $font-weight-semibold;
+  font-size: 16px;
+}
+
+input {
+  font-family: 'Poppins', sans-serif;
+}
+
+textarea {
+  font-family: 'Poppins', sans-serif;
+}

@@ -1,0 +1,10 @@
+@use '../sass-utils/mixins';
+
+.stack__icon {
+  display: flex;
+  gap: 10px;
+
+  @include mixins.sm {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,39 @@
+@use '../sass-utils/variables';
+@use '../sass-utils/mixins';
+@use '../components/article';
+
+.blogs__wrapper {
+  width: 60vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  @include mixins.xl {
+    width: 70vw;
+  }
+
+  @include mixins.md {
+    width: 80vw;
+  }
+
+  .blogs__title {
+    height: 400px;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid variables.$primary-color;
+  }
+
+  .blogs__articles {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    &:last-child {
+      padding-bottom: 50px;
+    }
+  }
+}
